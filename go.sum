@@ -1,0 +1,3 @@
+github.com/containerd/containerd/api v1.10.0/go.mod h1:NBm1OAk8ZL+LG8R0ceObGxT5hbUYj7CzTmR3xh0DlMM=
+github.com/containerd/containerd/v2 v2.2.1/go.mod h1:NR70yW1iDxe84F2iFWbR9xfAN0N2F0NcjTi1OVth4nU=
+google.golang.org/grpc v1.76.0/go.mod h1:Ju12QI8M6iQJtbcsV+awF5a4hfJMLi4X0JLo94ULZ6c=

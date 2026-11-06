@@ -1,0 +1,14 @@
+[Unit]
+Description=logsnap - containerd proxy snapshotter example
+# 必须先于 containerd 启动：containerd 启动时就会连接代理插件的 socket
+Before=containerd.service
+
+[Service]
+ExecStart=/usr/local/bin/logsnap --address /run/logsnap/logsnap.sock --root /var/lib/logsnap
+Restart=always
+# 快照器要执行 mount/overlay 等操作，需要 root
+User=root
+
+[Install]
+WantedBy=multi-user.target
+RequiredBy=containerd.service

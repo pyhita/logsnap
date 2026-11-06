@@ -1,0 +1,14 @@
+version = 3
+
+# 测试用的独立目录，避免影响系统上已有的 containerd
+root  = "/tmp/ctd-test/root"
+state = "/tmp/ctd-test/state"
+
+[grpc]
+  address = "/tmp/ctd-test/containerd.sock"
+
+# 注册代理插件：名字 logsnap 就是客户端用的 snapshotter 名
+[proxy_plugins]
+  [proxy_plugins.logsnap]
+    type    = "snapshot"
+    address = "/run/logsnap/logsnap.sock"
