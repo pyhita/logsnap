@@ -12,3 +12,11 @@ state = "/tmp/ctd-test/state"
   [proxy_plugins.logsnap]
     type    = "snapshot"
     address = "/run/logsnap/logsnap.sock"
+
+[plugins."io.containerd.transfer.v1.local"]
+  [[plugins."io.containerd.transfer.v1.local".unpack_config]]
+    platform    = "linux/amd64"
+    snapshotter = "overlayfs"
+  [[plugins."io.containerd.transfer.v1.local".unpack_config]]
+    platform    = "linux/amd64"
+    snapshotter = "logsnap"
